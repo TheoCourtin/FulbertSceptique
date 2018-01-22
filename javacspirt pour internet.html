@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #viande {
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img id="viande" src="C:\Users\Théo Courtin\Pictures\Saved Pictures\cochon.png">
+
+
+  <script>
+    viande.onclick = function() {
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        viande.style.left = timePassed / 1.15 + 'px';
+		viande.style.down = timePassed / 5 + 'px';
+		
+		
+
+        if (timePassed > 2000) clearInterval(timer);
+
+      }, 20);
+    }
+  </script>
+
+
+</body>
+
+</html>
